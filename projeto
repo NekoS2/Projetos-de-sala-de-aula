@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int N, M;
+
+    // printf("digite o tamanho do vetor A: ");
+    scanf("%d", &N);
+    // printf("digite o tamanho do vetor B: ");
+    scanf("%d", &M);
+
+    int A[N], B[M], C[N + M];
+
+    // printf("digite os elementos do vetor A:\n");
+    for (int i = 0; i < N; i++)
+    {
+        scanf("%d", &A[i]);
+    }
+
+    // printf("digite os elementos do vetor B:\n");
+    for (int i = 0; i < M; i++)
+    {
+        scanf("%d", &B[i]);
+    }
+
+    for (int i = 0; i < N; i++)
+    {
+        C[i] = A[i];
+    }
+    for (int i = 0; i < M; i++)
+    {
+        C[N + i] = B[i];
+    }
+
+    // printf("Vetor A: ");
+    for (int i = 0; i < N; i++)
+    {
+        printf("%d ", A[i]);
+    }
+    printf("\n");
+
+    // printf("Vetor B: ");
+    for (int i = 0; i < M; i++)
+    {
+        printf("%d ", B[i]);
+    }
+    printf("\n");
+
+    // printf("Vetor C: ");
+    for (int i = 0; i < N + M; i++)
+    {
+        printf("%d ", C[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
